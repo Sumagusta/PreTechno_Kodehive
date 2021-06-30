@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p id="target"></p>
+
+<script type="text/javascript">
+	
+	var irows = 10, pattern="", mleft = 150;
+	
+	for (var i = 0; i < irows ; i++) {
+		pattern += "<span style='color: red; margin-left: "+mleft+"px;'>"
+		for (var j = 0; j < i; j++) {
+			pattern += " x"
+		}
+		pattern += "</span><br />"
+		mleft -=7;
+	}
+	mleft+=14;
+	
+	document.getElementById("target").innerHTML = pattern;
+	
+</script>
+</body>
+</html>

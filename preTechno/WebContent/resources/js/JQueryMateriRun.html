@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JQuery</title>
+</head>
+<body>
+
+<input type="text" id="text1" />
+
+<input title ="isi data kamu" type="text" />
+
+<h3 title ="header 1"></h3>
+
+<img id="img1" alt="" src="img/logo/js/pict.png">
+
+<p id="paragraph1"></p>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	document.getElementById("text1");
+	$("#text1").val('belajar');
+	
+	function ambilTitle() {
+		var placeHolder = $("h3").attr("title");
+		$("#paragraph1").text(placeHolder)
+	}
+	
+	function jqueryAttributeII() {
+		$('#img1').attr('src','images/Logo Kodehive Academy.png')
+	}
+	
+	
+	
+	$(document).ready(function() {
+		ambilTitle();
+		jqueryAttributeII();
+	});
+</script>
+</body>
+</html>

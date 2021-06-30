@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JQuery</title>
+
+<style type="text/css">
+.Hijau {
+	background-color: green;
+	color: white;
+}
+
+.Yellow {
+	background-color: yellow;
+}
+
+.warnaHijau {
+	color: green;
+}
+
+.customPadding {
+	background-color: navy;
+	color: maroon;
+	font-family: sans-serif;
+	padding: 20px, 25px, 50px;
+}
+
+div {
+      display: block;
+      width: 126px;
+      height: 180px;
+      background-color: red;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    }
+div:nth-child(even) {
+      display: block;
+      width: 126px;
+      height: 180px;
+      background-color: blue;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    }
+div:nth-child(odd) {
+      display: block;
+      width: 126px;
+      height: 180px;
+      background-color: yellow;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    }
+    
+  
+</style>
+
+</head>
+<body>
+
+	<input type="text" id="text1" />
+
+	<input title="isi data kamu" type="text" />
+
+	<h3 title="header 1"></h3>
+
+	<img id="img1" alt="" src="img/logo/js/pict.png">
+
+	<p id="paragraph1"></p>
+
+	<hr />
+	
+	<p id="addClass" class="Yellow">Ini contoh addClass</p>
+
+	<hr />
+
+	<h2 id="cssP1">CSS Properties</h2>
+
+	<hr />
+	
+	<div>TELUR 1</div>
+	<div>TELUR 2</div>
+	<div>TELUR 3</div>
+	<div>TELUR 4</div>
+	<div>TELUR 5</div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script type="text/javascript">
+	
+	function eventDOMHtml() {
+		$('div').on("click", function() {
+			var content = $(this).html()
+			$('#cssP1').html(content)
+		});
+	}
+	
+	function eventOnClick() {
+		$('div').on("click", function() {
+			$(this).css({"background-color":"#171717", "color":"white"})
+		});
+	}
+	
+	function settingElement() {
+		$('div:first').width(110);
+		$('div:first').css('background-color','#F15B21');
+	}
+	
+	function cssProperties1() {
+		$('#cssP1').css('background-color', '#F15B21')
+	}
+	
+	function cssMultipleProperties() {
+		$('#cssP1').css({'background-color':'#F15B21', 'color':'#FFFFFF', 'font-family':'sans-serif'})
+	}
+	
+	document.getElementById("text1");
+	$("#text1").val('belajar');
+	
+	function ambilTitle() {
+		var placeHolder = $("h3").attr("title");
+		$("#paragraph1").text(placeHolder)
+	}
+	
+	function jqueryAttributeII() {
+		$('#img1').attr('src','images/Logo Kodehive Academy.png')
+		//$('#img1').prop('src','images/Logo Kodehive Academy.png')
+	}
+	
+	function addClassJS() {
+		setTimeout(() => {
+		$('#addClass').addClass('customPadding')			
+		}, 700);
+	}
+	
+	function removeClassJS() {
+		setTimeout(() => {
+			$('#addClass').removeClass('Hijau')
+		}, 100);
+		
+	}
+	
+	$(document).ready(function() {
+		ambilTitle();
+		jqueryAttributeII();
+		removeClassJS();
+		addClassJS();
+		cssProperties1();
+		cssMultipleProperties();
+		settingElement();
+		eventOnClick();
+		eventDOMHtml();
+	});
+</script>
+</body>
+</html>

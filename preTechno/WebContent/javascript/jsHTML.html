@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Javascript & HTML Page</title>
+</head>
+<body>
+
+	<input type="button" value="Alert Running" onclick="alertClick();">
+	
+	<input type="button" value="Modulus %" onclick="outputReturn();">
+	<input type="button" value="Modulus % #2" onclick="butuhModulus();">
+	
+	<input type="button" value="pertambahan" onclick="tambahData();"> || <br /><br />
+	
+	<input type="button" value="ubahVariable" onclick="ubahVariable();">
+	
+	<input type="button" value="ubahVariableLet" onclick="ubahVariableLet();">
+	
+	<input id="condition" type="button" value="Js Running" onclick="conditonJS();">
+	
+	<p id="deskripsi" style="display:none;" >Text Muncul</p>
+	
+	<form onsubmit="outputReturn()">
+	<h3>Event Submit</h3>
+	
+	<input type="submit" value="submit">
+	</form>
+	
+
+	
+<script src="../resources/js/javascript1.js"></script>
+
+<script type="text/javascript">
+
+	function alertClick() {
+		alert("notification javascript")
+	}
+	
+	function funcParam(judulBuku, Penulis, harga) {
+		
+		document.write(" Judul buku "+judulBuku+" ditulis oleh "+Penulis+", price : "+harga+".")
+	}
+	
+	function conditonJS() {
+		var idDeskripsi = document.getElementById("deskripsi");
+		
+		if (idDeskripsi.style.display == "none") {
+			idDeskripsi.style.display = "block";
+		} else {
+			idDeskripsi.style.display = "none";
+		}
+	}
+	
+	
+function outputReturn() {
+	var hasil;
+	hasil = "Hasil Operasi Modulus : "+ funcReturn(20, 3);
+	
+	document.write(hasil);
+}
+
+function butuhModulus() {
+	var modulus2;
+	modulus2 = "modulus kedua : "+ funcReturn(90, 2);
+	
+	document.write(modulus2);
+}
+
+function tambahData() {
+	var operasiTambah;
+	operasiTambah = "operasi tambah : "+ tambah(45, 5);
+	
+	document.write(operasiTambah);
+}
+
+let a1let = 700; // global variable
+
+var ba = 800;
+
+var ba = 300;
+
+function ubahVariableLet() {
+	
+	document.writeln("var a1let diubah ke - "+ ba);
+}
+
+aritmatika(20, 10);
+document.write("<br />");
+operatorPerbandingan(12, 15)
+document.write("<br />");
+
+loopInForIn();
+
+function arrayFunc() {
+	var array1 = ["Nama", 23, "Jabar"]
+	document.write("isi array : "+ array1 + "<br />")
+	document.write("Banyak element array = "+ array1.length + "<br />");
+}
+
+arrayFunc();
+
+indexOfArray();
+
+
+/* function hewan(singa, macan, serigala) {
+	this.singa = singa;
+	this.macan = macan;
+	this.serigala = serigala;
+}
+
+hewan.prototype.kucing = function sifat() {
+	return "kucing mirip dengan " + this.macan
+}
+
+var Hewan = new hewan('ganas', 'tangkas', 'sadis');
+ */
+</script>
+
+</body>
+</html>

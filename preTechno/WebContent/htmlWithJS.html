@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HTML & Javascript</title>
+</head>
+<body>
+
+<p id="test"></p>
+	
+<script type="text/javascript">
+
+	document.write("coba \a enter")
+	
+	function display(ss) {
+	document.getElementById("test").innerHTML = ss;
+	}
+
+	function myCalculator(num1, num2, myCallback) {
+		  let sum = num1 + num2;
+		  myCallback(sum);
+		}
+
+		myCalculator(5, 5, display);
+		
+</script>
+
+</body>
+
+</html>
